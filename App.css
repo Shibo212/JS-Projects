@@ -1,4 +1,44 @@
+*{
+  padding: 0%;
+  margin: 0%;
+}
+
 h1 {
     text-align: center;
-    color: blue;
+    color: rgb(117, 101, 41);
 }
+nav {
+    background-color: #c8b7b7;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    transition: top 0.3s;
+    width: auto;
+    
+    }
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: #332e2dea;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      background-color: #ddd;
+    }
