@@ -6,8 +6,18 @@ function saveNote() {
     savedNotes.push(note);
     localStorage.setItem("userNotes", JSON.stringify(savedNotes));
     displayNotes();
-    alert("Note saved successfully!");
+    showAlert("success", "Note saved successfully!");
 }
+function showAlert(type, message) {
+    var alertBox = document.createElement("div");
+    alertBox.classList.add("alert", type);
+    alertBox.textContent = message;
+    document.body.appendChild(alertBox);
+  
+    setTimeout(function() {
+      alertBox.remove();
+    }, 3000);
+  }
 
 function deleteNote(index) {
     var savedNotes = JSON.parse(localStorage.getItem("userNotes")) || [];
@@ -34,6 +44,7 @@ function displayNotes() {
         notesBox.textContent = "No notes saved.";
     }
 }
+
 
 window.onload = function() {
     displayNotes();
